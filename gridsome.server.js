@@ -16,5 +16,9 @@ module.exports = function(api) {
       path: "/my-code-page",
       component: "./src/templates/MyCodePage.vue",
     });
+    createPage({
+      path: "/d-user/:id(\\d+)",
+      component: "./src/templates/User.vue",
+    });
   });
 };
