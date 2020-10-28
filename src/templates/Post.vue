@@ -1,11 +1,11 @@
 <template>
-<Layout>
-  <div>
-    <h1>Post {{ $page.post.id }}</h1>
-    <h2>{{ $page.post.title }}</h2>
-    <p>{{ $page.post.content }}</p>
-  </div>
-</Layout>
+  <Layout>
+    <div>
+      <h1>Post {{ $page.post.id }}</h1>
+      <h2>{{ $page.post.title }}</h2>
+      <p>{{ $page.post.content }}</p>
+    </div>
+  </Layout>
 </template>
 
 <page-query>
@@ -20,19 +20,21 @@ query($id: ID!) {
 
 <script>
 export default {
- name: 'Post',
+  name: "Post",
   data() {
-    return {
-
-    }
+    return {};
   },
   components: {},
   watch: {},
   mounted() {},
-  methods: {}
-}
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+    };
+  },
+  methods: {},
+};
 </script>
 
 <style scoped>
-
 </style>
